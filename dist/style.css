@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url("https://source.unsplash.com/1600x900/?nature,water");
+	/* 		 linear-gradient(#4671ea, #ac34e7); */
+	padding: 0 20px;
+}
+form {
+	max-width: 550px;
+	width: 100%;
+	background: #fff;
+	padding: 30px;
+	border-radius: 4px;
+}
+form .inputBox {
+	display: flex;
+	height: 55px;
+	align-items: center;
+	position: relative;
+}
+.inputBox input {
+	height: 100%;
+	outline: none;
+	border: 2px solid #ee11aa;
+	border-radius: 4px;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 0 45px;
+	transition: all 0.3s ease;
+}
+.inputBox input.input {
+	width: 75%;
+	margin-right: 20px;
+}
+form.valid .inputBox input.input {
+	border-color: #4671ea;
+}
+.inputBox input.input:focus {
+	border-color: #4671ea;
+}
+form.error input.input {
+	border-color: #de0611;
+}
+.inputBox input.button {
+	width: 25%;
+	padding: 0;
+	color: #fff;
+	background: #4671ea;
+	border: none;
+	cursor: pointer;
+}
+.inputBox input.button:hover {
+	background: #1748cf;
+}
+.inputBox i {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+.inputBox i.email-icon {
+	color: #bfbfbf;
+	left: 15px;
+	transition: all 0.3s ease;
+}
+form.valid i.email-icon {
+	color: #1748cf;
+}
+.inputBox input.input:focus ~ i.email-icon {
+	color: #1748cf;
+}
+
+.inputBox .error-icon,
+.inputBox .passed-icon {
+	color: #de0611;
+	left: calc(75% - 60px);
+	display: none;
+}
+form.error .error-icon {
+	display: block;
+}
+.inputBox .passed-icon {
+	color: #1748cf;
+}
+form.valid .passed-icon {
+	display: block;
+}
+form .data {
+	color: #de0611;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 10px 0 -10px 2px;
+}
+form.valid .data {
+	color: #1748cf;
+}
